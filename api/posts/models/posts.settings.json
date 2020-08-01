@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Contant": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 20
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
+    },
+    "comments": {
+      "collection": "comments",
+      "via": "posts"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "posts"
+    },
+    "Tag": {
+      "type": "string",
+      "required": true
+    },
+    "Thembnal": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

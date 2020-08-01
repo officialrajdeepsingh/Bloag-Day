@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "posts": {
+      "via": "categories",
+      "collection": "posts",
+      "dominant": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name"
+    }
+  }
+}

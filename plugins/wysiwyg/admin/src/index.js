@@ -4,6 +4,7 @@ import App from './containers/App';
 import Initializer from './containers/Initializer';
 import lifecycles from './lifecycles';
 import trads from './translations';
+import Wysiwyg from './components/Wysiwyg';
 
 export default strapi => {
   const pluginDescription = pluginPkg.strapi.description || pluginPkg.description;
@@ -47,6 +48,8 @@ export default strapi => {
       ],
     },
   };
+
+  strapi.registerField({ type: 'wysiwyg', Component: Wysiwyg });
 
   return strapi.registerPlugin(plugin);
 };
