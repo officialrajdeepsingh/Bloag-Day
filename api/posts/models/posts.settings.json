@@ -44,6 +44,12 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "roles": {
+      "plugin": "users-permissions",
+      "collection": "role",
+      "via": "posts",
+      "dominant": true
     }
   }
 }

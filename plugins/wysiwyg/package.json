@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-balloon": "^21.0.0",
+    "@ckeditor/ckeditor5-heading": "^21.0.0",
     "@ckeditor/ckeditor5-react": "^2.1.0"
   },
   "author": {
@@ -27,5 +28,8 @@
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@ckeditor/ckeditor5-alignment": "^21.0.0"
+  }
 }

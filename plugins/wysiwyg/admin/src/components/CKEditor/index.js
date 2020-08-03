@@ -2,16 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-balloon';
+
 import styled from 'styled-components';
 
+// import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+
+
+
 const Wrapper = styled.div`
-  .ck-editor__main {
-    min-height: 200px;
-    > div {
-      min-height: 200px;
-    }
+  border:1px solid grey;
+  min-height:100px;
+
+  :hover{
+    border:none;
+  }
+  
+  > div {
+    min-height:100px;
   }
 `;
+
+
+// window.ClassicEditor = ClassicEditor;
+// window.Alignment = Alignment;
+
 
 const configuration = {
   toolbar: [
@@ -30,23 +44,27 @@ const configuration = {
     'insertTable',
     'mediaEmbed',
     'undo',
-    'redo',
+    'redo'
   ],
+  displayWords: true,
+  placeholder: 'Write some text...'
 };
 
 const Editor = ({ onChange, name, value }) => {
+  console.log('test' )
   return (
     <Wrapper>
+
       <CKEditor
         editor={ClassicEditor}
-        style={{'border':'1px solid blue'}}
         config={configuration}
-        data={value}
+        data={value} 
         onChange={(event, editor) => {
           const data = editor.getData();
           onChange({ target: { name, value: data } });
         }}
       />
+
     </Wrapper>
   );
 };
