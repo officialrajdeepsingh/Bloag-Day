@@ -34,9 +34,9 @@
       "configurable": false,
       "plugin": "users-permissions"
     },
-    "posts": {
+    "authors": {
       "via": "roles",
-      "collection": "posts"
+      "collection": "author"
     }
   }
 }

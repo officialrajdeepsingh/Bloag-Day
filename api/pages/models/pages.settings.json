@@ -1,46 +1,39 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "pages",
   "info": {
-    "name": "Posts"
+    "name": "Pages"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "Name": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
-    "Contant": {
-      "type": "richtext",
-      "required": true,
-      "minLength": 20
+    "Tags": {
+      "type": "string",
+      "required": true
     },
     "Slug": {
       "type": "uid",
-      "targetField": "Title",
+      "targetField": "Name",
       "required": true
     },
-    "categories": {
-      "collection": "categories",
-      "via": "posts"
+    "Conatact": {
+      "type": "richtext",
+      "required": true
     },
     "Thembnal": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
-      "required": true
-    },
-    "users": {
-      "via": "posts",
-      "plugin": "users-permissions",
-      "collection": "user"
+      "required": false
     },
     "Excerpt": {
       "type": "text",
@@ -48,10 +41,10 @@
     },
     "tags": {
       "collection": "tags",
-      "via": "posts"
+      "via": "pages"
     },
     "authors": {
-      "via": "posts",
+      "via": "pages",
       "collection": "author"
     }
   }

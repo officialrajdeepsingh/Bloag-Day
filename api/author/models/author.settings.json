@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Author"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "Facebook": {
+      "type": "string"
+    },
+    "Twitter": {
+      "type": "string"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "posts": {
+      "collection": "posts",
+      "via": "authors",
+      "dominant": true
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "authors",
+      "dominant": true
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "authors",
+      "dominant": true
+    },
+    "roles": {
+      "plugin": "users-permissions",
+      "collection": "role",
+      "via": "authors",
+      "dominant": true
+    },
+    "pages": {
+      "collection": "pages",
+      "via": "authors",
+      "dominant": true
+    }
+  }
+}

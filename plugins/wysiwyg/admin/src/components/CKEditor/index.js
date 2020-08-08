@@ -5,26 +5,23 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-balloon';
 
 import styled from 'styled-components';
 
-// import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 
 
 const Wrapper = styled.div`
   border:1px solid grey;
-  min-height:100px;
+  min-height:150px;
 
   :hover{
-    border:none;
+    border-color:blue;
   }
   
   > div {
-    min-height:100px;
+    min-height:150px;
   }
 `;
 
 
-// window.ClassicEditor = ClassicEditor;
-// window.Alignment = Alignment;
 
 
 const configuration = {
@@ -51,7 +48,7 @@ const configuration = {
 };
 
 const Editor = ({ onChange, name, value }) => {
-  console.log('test' )
+
   return (
     <Wrapper>
 
