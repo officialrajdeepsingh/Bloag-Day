@@ -13,10 +13,6 @@
       "type": "string",
       "required": true
     },
-    "Tags": {
-      "type": "string",
-      "required": true
-    },
     "Slug": {
       "type": "uid",
       "targetField": "Name",
@@ -44,8 +40,17 @@
       "via": "pages"
     },
     "authors": {
-      "via": "pages",
-      "collection": "author"
+      "collection": "author",
+      "via": "pages"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "published",
+        "draft"
+      ],
+      "default": "draft",
+      "required": true
     }
   }
 }

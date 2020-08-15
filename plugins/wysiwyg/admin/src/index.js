@@ -48,8 +48,6 @@ export default strapi => {
       ],
     },
   };
-
   strapi.registerField({ type: 'wysiwyg', Component: Wysiwyg });
-
   return strapi.registerPlugin(plugin);
 };

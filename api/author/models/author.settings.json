@@ -42,8 +42,8 @@
       "required": true
     },
     "posts": {
-      "collection": "posts",
       "via": "authors",
+      "collection": "posts",
       "dominant": true
     },
     "categories": {
@@ -63,8 +63,8 @@
       "dominant": true
     },
     "pages": {
-      "collection": "pages",
       "via": "authors",
+      "collection": "pages",
       "dominant": true
     }
   }

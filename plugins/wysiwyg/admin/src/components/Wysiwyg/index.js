@@ -1,10 +1,10 @@
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isEmpty } from 'lodash';
 import { Button } from '@buffetjs/core';
 import { Label, InputDescription, InputErrors } from 'strapi-helper-plugin';
 import Editor from '../CKEditor';
 import MediaLib from '../MediaLib';
-import React, { useState } from 'react';
 
 const Wysiwyg = ({
   inputDescription,
@@ -24,9 +24,8 @@ const Wysiwyg = ({
 
   const handleChange = data => {
     if (data.mime.includes('image')) {
-      const imgTag = `<p><img src="${data.url}" caption="${data.caption}" alt="${data.alternativeText}"></img></p>`;
+      const imgTag = `<p><img src="${"http://localhost:1337"}${data.url}" caption="${data.caption}" alt="${data.alternativeText}"></img></p>`;
       const newValue = value ? `${value}${imgTag}` : imgTag;
-
       onChange({ target: { name, value: newValue } });
     }
 
@@ -39,7 +38,7 @@ const Wysiwyg = ({
     <div
       style={{
         marginBottom: '1.6rem',
-        fontSize: '1.5rem',
+        fontSize: '1.3rem',
         fontFamily: 'Lato',
       }}
     >

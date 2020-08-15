@@ -37,11 +37,6 @@
       "plugin": "upload",
       "required": true
     },
-    "users": {
-      "via": "posts",
-      "plugin": "users-permissions",
-      "collection": "user"
-    },
     "Excerpt": {
       "type": "text",
       "required": true
@@ -51,8 +46,17 @@
       "via": "posts"
     },
     "authors": {
-      "via": "posts",
-      "collection": "author"
+      "collection": "author",
+      "via": "posts"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "published",
+        "draft"
+      ],
+      "default": "draft",
+      "required": true
     }
   }
 }
