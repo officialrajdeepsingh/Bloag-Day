@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "tags",
   "info": {
-    "name": "Categories"
+    "name": "Tags"
   },
   "options": {
     "increments": true,
@@ -11,24 +11,28 @@
   "attributes": {
     "Name": {
       "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "Description": {
-      "type": "richtext",
       "required": true
-    },
-    "posts": {
-      "via": "categories",
-      "collection": "posts",
-      "dominant": true
     },
     "Slug": {
       "type": "uid",
       "targetField": "Name"
     },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "posts": {
+      "via": "tags",
+      "collection": "posts",
+      "dominant": true
+    },
+    "pages": {
+      "via": "tags",
+      "collection": "pages",
+      "dominant": true
+    },
     "authors": {
-      "via": "categories",
+      "via": "tags",
       "collection": "author"
     }
   }

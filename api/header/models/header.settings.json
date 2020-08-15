@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "headers",
+  "info": {
+    "name": "Header"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "CustomUrl": {
+      "type": "string",
+      "default": "null",
+      "unique": false
+    }
+  }
+}

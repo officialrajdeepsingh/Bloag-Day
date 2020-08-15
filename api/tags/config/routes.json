@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/comments",
-      "handler": "comments.find",
+      "path": "/tags",
+      "handler": "tags.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/comments/count",
-      "handler": "comments.count",
+      "path": "/tags/count",
+      "handler": "tags.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/comments/:id",
-      "handler": "comments.findOne",
+      "path": "/tags/:id",
+      "handler": "tags.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/comments",
-      "handler": "comments.create",
+      "path": "/tags",
+      "handler": "tags.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/comments/:id",
-      "handler": "comments.update",
+      "path": "/tags/:id",
+      "handler": "tags.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/comments/:id",
-      "handler": "comments.delete",
+      "path": "/tags/:id",
+      "handler": "tags.delete",
       "config": {
         "policies": []
       }
