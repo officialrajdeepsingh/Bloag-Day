@@ -53,6 +53,14 @@
       "plugin": "users-permissions",
       "configurable": false
     },
+<<<<<<< HEAD
+=======
+    "posts": {
+      "collection": "posts",
+      "via": "users",
+      "dominant": true
+    },
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
     "Image": {
       "model": "file",
       "via": "related",

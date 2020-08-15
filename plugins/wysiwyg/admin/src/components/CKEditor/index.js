@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from '@ckeditor/ckeditor5-react';
 import styled from 'styled-components';
+<<<<<<< HEAD
 import BalloonBlockEditor from './build/ckeditor'
 
 
@@ -62,6 +63,26 @@ const configuration = {
 	
 	placeholder: 'Start Writting'
 }
+=======
+
+
+
+
+const Wrapper = styled.div`
+  border:1px solid grey;
+  min-height:150px;
+
+  :hover{
+    border-color:blue;
+  }
+  
+  > div {
+    min-height:150px;
+  }
+`;
+
+
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
 
 
 const Editor = ({ onChange, name, value }) => {

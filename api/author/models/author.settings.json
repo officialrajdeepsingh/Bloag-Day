@@ -42,8 +42,13 @@
       "required": true
     },
     "posts": {
+<<<<<<< HEAD
       "via": "authors",
       "collection": "posts",
+=======
+      "collection": "posts",
+      "via": "authors",
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
       "dominant": true
     },
     "categories": {
@@ -63,8 +68,13 @@
       "dominant": true
     },
     "pages": {
+<<<<<<< HEAD
       "via": "authors",
       "collection": "pages",
+=======
+      "collection": "pages",
+      "via": "authors",
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
       "dominant": true
     }
   }

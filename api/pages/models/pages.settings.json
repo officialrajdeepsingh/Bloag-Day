@@ -13,6 +13,13 @@
       "type": "string",
       "required": true
     },
+<<<<<<< HEAD
+=======
+    "Tags": {
+      "type": "string",
+      "required": true
+    },
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
     "Slug": {
       "type": "uid",
       "targetField": "Name",
@@ -40,6 +47,7 @@
       "via": "pages"
     },
     "authors": {
+<<<<<<< HEAD
       "collection": "author",
       "via": "pages"
     },
@@ -51,6 +59,10 @@
       ],
       "default": "draft",
       "required": true
+=======
+      "via": "pages",
+      "collection": "author"
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
     }
   }
 }

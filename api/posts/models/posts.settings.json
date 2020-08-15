@@ -37,6 +37,14 @@
       "plugin": "upload",
       "required": true
     },
+<<<<<<< HEAD
+=======
+    "users": {
+      "via": "posts",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
     "Excerpt": {
       "type": "text",
       "required": true
@@ -46,6 +54,7 @@
       "via": "posts"
     },
     "authors": {
+<<<<<<< HEAD
       "collection": "author",
       "via": "posts"
     },
@@ -57,6 +66,10 @@
       ],
       "default": "draft",
       "required": true
+=======
+      "via": "posts",
+      "collection": "author"
+>>>>>>> 1078d2f0caf60f632a0b256bf331af68bcadae16
     }
   }
 }
